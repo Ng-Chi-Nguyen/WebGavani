@@ -1,0 +1,382 @@
+*{
+   margin: 0;
+   padding: 0;
+   overflow-x: auto;
+}
+a{
+   text-decoration: none;
+}
+.d-none{
+   display: none;
+}
+.co-red{
+   color: red !important;
+}
+.co-black{
+   color: #000 !important;
+}
+.row{
+   display: flex;
+   flex-wrap: wrap;
+}
+.row-nowrap{
+   display: flex;
+   flex-wrap: nowrap;
+}
+.row_nowrap{
+   display: flex;
+   flex-wrap: nowrap;
+}
+.btn-submit{
+   width: 70px!important;
+   border: 0!important;
+   background: #176FEE;
+   color: #FFF;
+   cursor: pointer;
+}
+.header{
+   height: 50px;
+   width: 100%;
+   border-bottom: 2px solid #000;
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+}
+.left{
+   padding: 20px;
+   color: #CCC;
+   width: 10%;
+   height: 100000px;
+   border: 2px solid #000;
+   margin-top: 20px;
+}
+.left ul{
+   list-style: none;
+}
+.left ul li{
+   margin-bottom: 8px;
+}
+.left ul li a{
+   font-size: 18px;
+   color: #000;
+}
+.left ul li a:hover{
+   color: #176FEE;
+}
+.left .ul-children{
+   padding-left: 30px;
+   padding-top: 10px;
+}
+.body{
+   padding: 20px;
+   width: 100vw;
+   height: 100000px;
+   border: 2px solid #000;
+   margin-top: 20px;
+   margin-left: 19px;
+}
+/* Loai Hang ---------------------------------------*/
+.body .loaiHang .title{
+   font-size: 18px;
+   margin-bottom: 20px;
+}
+.body .loaiHang select{
+   padding: 5px;
+   border: 0;
+   outline: 0;
+   border: 2px solid #ccc;
+   width: 300px;
+   margin-bottom: 50px;
+}
+.body .loaiHang input{
+   padding: 5px;
+   border: 0;
+   outline: 0;
+   border-bottom: 2px solid #ccc;
+   width: 300px;
+}
+/* Loai Hang -----------------------------*/
+.body .list_LH .title{
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+.body .list_LH .tbl_loaihang{
+   border-collapse: collapse;
+}
+.body .list_LH .tbl_loaihang tr th{
+   border: 1px solid #000;
+   padding: 5px 10px;
+}
+.body .list_LH .tbl_loaihang tr th img{
+   width: 30px;
+   height: auto;
+}
+/* Hang hoa ---------------------------------------*/
+.hangHoa .title{
+   margin-bottom: 20px;
+}
+.hangHoa .mg-bottom{
+   margin-bottom: 12px;
+   display: flex;
+   align-items: center;
+}
+.hangHoa p{
+   margin-right: 5px;
+   width: 100px;
+}
+.hangHoa input, select{
+   width: 200px;
+   padding: 5px;
+   outline: none;
+   border: 1px solid #000;
+}
+.List_HH .title{
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+.List_HH .tbl_hanghoa{
+   border-collapse: collapse;
+}
+.List_HH .tbl_hanghoa tr th{
+   border: 1px solid #000;
+   padding: 5px 10px;
+}
+.List_HH .tbl_hanghoa .tbody th:nth-child(6){
+   max-height: 150px; /* Chiều cao tối đa của cột */
+   overflow: hidden;  /* Ẩn nội dung vượt quá */
+   text-align: left;
+}
+/* Làm mỏng thanh cuộn */
+.scrollable-content::-webkit-scrollbar {
+   width: 6px;  /* Chiều rộng của thanh cuộn dọc */
+   height: 5px; /* Chiều cao của thanh cuộn ngang */
+}
+
+/* Tùy chỉnh thanh trượt (phần di chuyển) */
+.scrollable-content::-webkit-scrollbar-thumb {
+   background-color: rgba(0, 0, 0, 0.5); /* Màu sắc và độ mờ của thanh trượt */
+   border-radius: 10px; /* Bo tròn các góc */
+}
+
+/* Tùy chỉnh phần track (nền của thanh cuộn) */
+.scrollable-content::-webkit-scrollbar-track {
+   background-color: rgba(0, 0, 0, 0.1); /* Màu nền nhạt hơn */
+   border-radius: 10px;
+}
+.List_HH .tbl_hanghoa .tbody th:nth-child(6) .scrollable-content {
+   max-height: 150px; /* Chiều cao tối đa của nội dung */
+   overflow-y: auto;  /* Thêm thanh cuộn theo chiều dọc khi vượt quá chiều cao */
+   padding-right: 5px; /* Khoảng cách với thanh cuộn */
+}
+.List_HH .tbl_hanghoa .tbody .th-img{
+   width: 150px;
+}
+.List_HH .tbl_hanghoa .tbody .th-img img{
+   width: 80%;
+   height: auto;
+}
+.List_HH .tbl_hanghoa .tbody .thaotac img{
+   width: 30px;
+   height: 30px;
+}
+.updateHangHoa .image{
+   width: 200px;
+   margin-left: 40px;
+}
+.updateHangHoa .image img{
+   width: 100%;
+   height: auto;
+}
+/* Danh Muc -----------------------------------*/
+.body .danhMuc .title{
+   font-size: 18px;
+   margin-bottom: 20px;
+}
+.body .danhMuc input{
+   padding: 5px;
+   border: 0;
+   outline: 0;
+   border-bottom: 2px solid #ccc;
+   width: 300px;
+}
+.body .list_DM .title{
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+.body .list_DM .tbl_danhmuc{
+   border-collapse: collapse;
+}
+.body .list_DM .tbl_danhmuc tr th{
+   border: 1px solid #000;
+   padding: 5px 10px;
+}
+.body .list_DM .tbl_danhmuc tr th img{
+   width: 30px;
+   height: auto;
+}
+/* Het Danh Muc -----------------------------------*/
+/* Anh Mo Ta -----------------------------------*/
+.body .List_HH_MoTa_Img .tbl_hanghoa .tbody .image_mota{
+   width: 600px;
+}
+.body .List_HH_MoTa_Img .tbl_hanghoa .tbody .image_mota img{
+   width: calc(100% / 4 - 10px);
+   height: auto;
+   border: 1px solid #ccc;
+}
+.body .updateHangHoa_MoTa img{
+   width: 300px;
+   height: auto;
+}
+/* Het Anh Mo Ta -----------------------------------*/
+/* Dia Chi -----------------------------------*/
+
+.DiaChi .tbl_diachi {
+   border-collapse: collapse;
+   margin-right: 20px;
+}
+.DiaChi .tbl_diachi th{
+   border: 1px solid #000;
+   padding: 5px 10px;
+}
+.DiaChi .tbl_diachi .tbody th img{
+   width: 30px;
+   height: auto;
+}
+/* Het Dia Chi -----------------------------------*/
+/* Hoa Don -----------------------------------*/
+.HoaDon h2{
+   margin-bottom: 20px;
+}
+.HoaDon{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+.HoaDon h2{
+   margin-bottom: 20px;
+}
+.HoaDon .List_HoaDon {
+   padding: 20px;
+   /* border: 1px solid #176FEE; */
+   width: calc(45% - 20px);
+   margin-right: 20px;
+   margin-bottom: 20px;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   position: relative;
+}
+.HoaDon .List_HoaDon .title_item{
+   display: flex;
+   line-height: 30px;
+}
+.HoaDon .List_HoaDon .title_item li{
+   border-bottom: 1px solid #ddd;
+   width: 100%;
+}
+.HoaDon .List_HoaDon .title_item li:first-of-type{
+   font-weight: bold;
+   width: 265px;
+}
+.HoaDon .List_HoaDon .diaChi .title_item li{
+   border-bottom: 0;
+}
+.HoaDon .List_HoaDon .CapNhatQuaTrinhGiaoHang .GD{
+   line-height: 30px;
+   margin-top: 70px;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   color: #63C58C;
+}
+.HoaDon .List_HoaDon .CapNhatQuaTrinhGiaoHang .Sang_GD1 button{
+   color: #63C58C;
+   background: transparent;
+   border: 0;
+   font-size: 17px;
+}
+.HoaDon .List_HoaDon .CapNhatQuaTrinhGiaoHang .GD button{
+   padding-top: 10px;
+   color: #63C58C;
+   background: transparent;
+   border: 0;
+   font-size: 17px;
+   cursor: pointer;
+}
+.HoaDon .List_HoaDon .CapNhatQuaTrinhGiaoHang .GD i{
+   padding-top: 10px;
+   margin-left: 10px;
+}
+.model{
+   position: absolute;
+   padding: 20px;
+   top: 0;
+   width: 37%;
+   z-index: 11;
+   left: calc(50% - 90% / 2);
+   width: 497px;
+   background: #fff;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   display: none; /* Kiểm tra xem có phần tử nào khác cũng sử dụng display: none không */
+   margin-bottom: 20px;
+   padding-bottom: 50px;
+}
+.container{
+   display: flex;
+    flex-direction: column; /* Sắp xếp các model theo chiều dọc */
+    align-items: center; /* Căn giữa các model */
+}
+.model .title{
+   font-size: 18px;
+   text-transform: uppercase;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.model .HoanThanh {
+   width: 100%;
+   text-align: right;
+}
+.model .HoanThanh input[type="submit"]{
+   padding: 5px 3px;
+   height: 37px;
+   width: 100px !important;
+   margin-left: 20px;
+   border-radius: 7px;
+   margin-top: 20px;
+}
+.model .close{
+   position: absolute;
+   font-size: 20px;
+   cursor: pointer;
+   top: 5px;
+   right: 5px;
+   color: red;
+}
+.model .List_HoaDon_Model {
+   width: 100%;
+   border: 0;
+   box-shadow: none;
+   padding: 0;
+}
+.model .List_HoaDon_Model ul{
+   display: flex;
+   width: 100%;
+}
+.model .List_HoaDon_Model ul li:first-of-type{
+   margin-right: 5px;
+   color: #176FEE;
+}
+/* Het Hoa Don -----------------------------------*/
+/* Tai Khoan -----------------------------------*/
+.TaiKhoan h2{
+   margin-bottom: 20px;
+}
+.TaiKhoan table{
+   border-collapse: collapse;
+   text-align: center;
+
+}
+.TaiKhoan table tr td{
+   border: 1px solid #000;
+   padding: 5px 15px;
+}
+/* Het Tai Khoan -----------------------------------*/

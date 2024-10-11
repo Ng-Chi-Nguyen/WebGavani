@@ -1,0 +1,2317 @@
+:root{
+   --bg: #D0021B;
+   --color: #f9d746;
+   --color-2: #F2283D;
+   --color-3: #717171;
+   --color-hover: #E3677E;
+   --font-family: 'Roboto', sans-serif;
+   --font-serif: 'Yeseva One', cursive;
+}
+*{
+   max-width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: var(--font-family);
+}
+.row{
+   display: flex;
+   flex-wrap: wrap;
+}
+a{
+   text-decoration: none;
+   color: #000;
+}
+
+li{
+   padding-left: 0;
+}
+.btn-all{
+   cursor: pointer;
+   font-size: 17px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 125px;
+   height: 50px;
+   background: #FFF;
+   color: var(--color-hover);
+   border: 1px solid var(--color-hover);
+   border-radius: 27px;
+   padding: 0 15px;
+}
+.btn-all p{
+   margin-right: 10px;
+}
+.co-red{
+   color: red;
+}
+.co-var{
+   color: var(--color-2);
+}
+.co-blue{
+   color: #176FEE;
+}
+.underline{
+   text-decoration: underline;
+   font-size: 13px;
+}
+/* Bỏ dấu mũi tên input type number */
+body input[type=number]::-webkit-inner-spin-button, 
+body input[type=number]::-webkit-outer-spin-button{
+   -webkit-appearance: none;
+   margin: 0;
+}
+/* HEADER --------------------------------------*/
+/* .header{
+   
+} */
+.header .header-top{
+   display: flex;
+   padding: 5px 20px 20px 20px;
+   align-items: center;
+   width: 97.4%;
+   background: #FFF;
+   padding-bottom: 10px;
+}
+.header .header-top .logo{
+   width: 25%;
+}
+.header .header-top .logo img{
+   width: 250px;
+   height: auto;
+}
+.header .header-top .center{
+   width: 40%;
+}
+.header .header-top .center .search{
+   max-width: 700px;
+   margin-bottom: 5px;
+   display: flex;
+   align-items: center;
+}
+.header .header-top .center .search input{
+   padding: 10px 20px;
+   width: 400px;
+   height: 20px;
+   outline: none;
+   border: 0;
+   background: #dddddd75;
+   border-radius: 25px 0 0 25px;
+}
+.header .header-top .center .search i{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 56px;
+   height: 40px;
+   background: var(--color);
+   color: red;
+   border-radius: 0 25px 25px 0;
+   cursor: pointer;
+}
+.header .header-top .center .search i:hover{
+   background: yellow;
+   transition: 1s;
+}
+.header .header-top .center .desc{
+   max-width: 500px;
+   overflow-y: hidden;
+   overflow-x: scroll;
+   white-space: nowrap;
+   font-size: 14px;
+   opacity: 0.7;
+}
+.header .header-top .right{
+   width: 45%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.header .header-top .right .hotline p{
+   margin-bottom: 8px
+}
+.header .header-top .right .hotline a{
+   font-size: 17px;
+   font-weight: bold;
+}
+.header .header-top .right .user a:last-child{
+   font-size: 13px;
+}
+.header .header-top .right .hotline a:hover, .header .header-top .right .user a:hover{
+   color: var(--color-hover);
+}
+.header .header-top .right .hotline, .header .header-top .right .user, .header .header-top .right .cart{
+   display: flex;
+   align-items: center;
+   margin-left: 30px;
+}
+.header .header-top .right .hotline img, .header .header-top .right .user img, .header .header-top .right .cart img{
+   margin-right: 10px;
+}
+.header .header-top .right .cart{
+   border: 2px solid var(--bg);
+   padding: 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.header .header-top .right .cart:hover{
+   color: var(--color-hover);
+}
+.header .header-top .right .cart span{
+   font-size: 18px;
+}
+.header .header-top .right .cart p{
+   width: 15px;
+   height: 20px;
+   padding: 3px;
+   background: var(--color);
+   color: red;
+   margin-left: 5px;
+   border-radius: 3px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.header .header-bottom{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   height: 60px;
+   background: var(--bg);
+   color: #FFF;
+   font-size: 19px;
+   padding-left: 20px;
+}
+.header .header-bottom .item:first-child{
+   height: 15px;
+   width: 254px;
+   overflow-y: hidden;
+   background: #FFF;
+   color: var(--bg)!important;
+   padding: 15px 0;
+   margin-right: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: -15px;
+   border-radius: 8px 8px 0 0;
+   border-bottom: 2px solid #ccc;
+}
+.header .header-bottom .item:first-child a{
+   color: var(--bg)!important;
+}
+.header .header-bottom .item{
+   width: 280px;
+   display: flex;
+   align-items: center;
+}
+.header .header-bottom .item i{
+   font-size: 22px;
+}
+.header .header-bottom .item img{
+   width: 35px;
+   height: auto;
+}
+.header .header-bottom .item a{
+   margin-left: 10px;
+   color: #FFF;
+}
+.header .header-bottom .item a:hover{
+   color: var(--color);
+}
+/* End Header ----------------------------------*/
+/* Footer ----------------------------------*/
+.footer {
+   z-index: 1;
+}
+.footer .About-Us{
+   padding: 40px 40px 5px 40px;
+   background: #F6F6F6;
+   width: 30%;
+}
+.footer .title{
+   margin-bottom: 15px;
+   font-size: 22px;
+}
+.footer .About-Us .logo img{
+   width: 100px;
+   height: auto;
+   margin-left: 10px;
+   margin-bottom: 10px;
+}
+.footer .About-Us .desc{
+   margin-bottom: 10px;
+}
+.footer .About-Us ul, .footer .support ul, .footer .pay ul{
+   margin-bottom: 30px;
+   margin-top: 20px;
+}
+.footer .About-Us ul li{
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+.footer .About-Us ul li i{
+   margin-right: 15px;
+   font-size: 20px;
+}
+.footer .About-Us ul li:first-child i{
+   margin-top: -15px;
+}
+.footer .About-Us ul li:last-child img{
+   margin-right: 15px;
+}
+.footer .Policy{
+   background: #E0E0E0;
+   width: 10%;
+   padding: 40px 40px 5px 40px;
+}
+.footer .Policy ul li, .footer .support ul li, .footer .pay ul li{
+   margin-bottom: 15px;
+}
+.footer .Policy ul li a, .footer .support ul li a{
+   font-size: 17px;
+}
+.footer .Policy ul li a:hover, .footer .support ul li a:hover{
+   color: var(--color-hover);
+}
+.footer .support{
+   background: #E0E0E0;
+   width: 15%;
+   padding: 40px 40px 5px 0;
+}
+.footer .pay{
+   width: 26.5%;
+   background: #E0E0E0;
+   padding: 40px 40px 5px 40px;
+}
+.footer .pay a{
+   margin-bottom: 15px;
+}
+/* End Footer ----------------------------------*/
+/* Body ----------------------------------*/
+/* Session 1 */
+
+.session_1{
+   display: flex;
+   margin-bottom: 50px;
+}
+.session_1 .left{
+   border: 1px solid #ccc;
+   border-top: 0;
+   width: 218px;
+   margin-left: 20px;
+   padding: 10px 0 0 35px;
+   overflow: visible;
+   position: relative;
+}
+.session_1 .left .danhMucHover{
+   display: flex;
+   align-items: center;
+   padding-bottom: 20px;
+   justify-content: space-between;
+   cursor: pointer;
+}
+.session_1 .left > li:hover > a, .session_1 .left > li:hover > i{
+   color: var(--color-hover);
+}
+ .session_1 .left i{
+   margin-right: 13px;
+   font-size: 14px;
+   display: flex;
+   justify-content: end;
+   opacity: 0.6;
+}
+.session_1 .center{
+   width: 50%;
+   padding: 20px 0 0 20px;
+   z-index: -1;
+}
+.session_1 .center img{
+   width: 100%;
+   height: auto;
+}
+.session_1 .right{
+   width: 13.5%;
+   margin-left: 20px;
+   padding: 20px 20px 20px 0;
+}
+.session_1 .right-code{
+   position: relative;
+}
+.session_1 .right-code .item{
+   background: #fff;
+   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .35));
+   padding: 10px 0 0 10px;
+   border-radius: 5px;
+   margin-top: 30px;
+   position: relative;
+}
+.session_1 .right-code .item::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -3px;
+   height: 100%;
+   width: 10px;
+   color: #fff;
+   background-clip: padding-box;
+   background: repeating-linear-gradient(#e5e5e5, #e5e5e5 5px, transparent 0, transparent 9px, #e5e5e5 0, #e5e5e5 10px) 0 / 2px 100% no-repeat, /* Tăng độ rộng từ 1px lên 2px */
+   radial-gradient(circle at 0 7px, transparent, transparent 2px, #e5e5e5ee 0, #e5e5e5 3px, currentColor 0) 1px 0 / 100% 10px repeat-y;
+}
+.session_1 .right-code .item .title-code{
+   color: var(--color-hover);
+   font-weight: 800;
+}
+.session_1 .right-code .item .desc{
+   font-size: 13px;
+    line-height: 1.2;
+    color: #727272;
+    padding-bottom: 7px;
+}
+.session_1 .right-code .item .thaotac{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.session_1 .right-code .item .thaotac button{
+   border: none;
+   padding: 6px 15px;
+   margin-bottom: 3px;
+   border-radius: 15px;
+   color: #FFF;
+   background-color: var(--color-hover);
+   cursor: pointer;
+}
+.session_1 .right-code .item .thaotac button:hover{
+   color: #fff;
+   filter: brightness(1.1);
+}
+.session_1 .right-code .item .thaotac a{
+   text-decoration: underline;
+   color: blue;
+}
+.session_1 .left .danhMucHover {
+   position: relative; /* Đảm bảo danh sách con căn chỉnh theo phần tử này */
+   overflow: visible;
+}
+
+.session_1 .left .category {
+   display: none;
+   position: absolute;
+   top: -10px; /* Đặt vị trí dọc cho danh sách con (bắt đầu từ đỉnh của phần tử cha) */
+   left: 100%; /* Đặt danh sách con nằm bên phải của phần tử cha */
+   width: 300px;
+   background: #FFF;
+   border: 1px solid #ccc;
+   padding: 10px;
+   z-index: 1000; /* Đảm bảo danh sách con nằm trên các phần tử khác */
+   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .35));
+}
+.session_1 .left .category li{
+   margin-bottom: 15px;
+}
+.session_1 .left .category li:hover{
+   color: var(--color-hover);
+}
+.session_1 .left .danhMucHover:hover .category, .session_1 .left .category:hover {
+   display: block; /* Hiển thị danh sách con khi hover */
+}
+.dialog {
+   background: #FFF;
+   padding: 20px;
+   width: 200px;
+   border: 1px solid #D0021B;
+   position: absolute;
+   top: 215px;
+   left: calc(50% - 100px);
+   display: none; /* Ẩn mặc định */
+}
+
+.show-dialog {
+   display: block; /* Hiển thị khi được kích hoạt */
+}
+/* End Body ----------------------------------*/
+/* End Session 1 -----------------------------------------------------------------------------------*/
+/* Session 2 -----------------------------------------------------------------------------------*/
+.bg-1{
+   background: #D82E4D;
+   padding: 60px;
+}
+.session_2{
+   padding: 40px;
+   background: #FFF;
+   border-radius: 10px;
+}
+.session_2 .title{
+   font-family: var(--font-family);
+   padding-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.session_2 .title .left{
+   font-size: 25px;
+   font-weight: bold;
+}
+.session_2 .title .left:hover{
+   color: #FF375C;
+}
+.session_2{
+   position: relative;
+}
+.session_2 .form-cart-add{
+   padding: 5px;
+   margin: 5px;
+   max-height: 400px;
+   width: calc(100% / 5 - 32px);
+   border: 1px solid #ccc;
+   background: #FFF;
+}
+.session_2 .form-cart-add .dis-none{
+   display: block;
+   width: 400px;
+   height: auto;
+   padding: 30px;
+   position: absolute;
+}
+/* .session_2 .product-item:hover{
+} */
+.session_2 .product-item .image{
+   text-align: center;
+   width: 200px;
+   height: 200px;
+   margin: auto;
+   max-height: 245px;
+   overflow: hidden;
+}
+.session_2 .product-item:hover .content .name-product{
+   color: var(--bg);
+}
+.session_2 .product-item .image img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+.session_2 .product-item .content{
+   padding: 10px;
+   position: relative;
+}
+.session_2 .product-item .content .info-product{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.session_2 .product-item .content .info-product .shopName{
+   font-size: 13px;
+   opacity: 0.6;
+}
+.session_2 .product-item .content .info-product .evaluate{
+   display: flex;
+   align-items: center;
+}
+.session_2 .product-item .content .info-product .evaluate i{
+   font-size: 14px;
+   color: yellow;
+}
+.session_2 .product-item .content .info-product .evaluate span{
+   font-size: 15px;
+   opacity: 0.8;
+   padding-right: 5px;
+   position: relative;
+}
+.session_2 .product-item .content .info-product .evaluate > span::before{
+   content: "";
+   position: absolute;
+   width: 5px;
+   height: 12px;
+   background: #ccc;
+   left: 11px;
+   top: 3px;
+}
+.session_2 .product-item .content .info-product .evaluate p{
+   padding-left: 5px;
+   font-size: 13px;
+   opacity: 0.6;
+}
+.session_2 .product-item .content .name-product{
+   font-size: 17px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   height: 65px;
+}
+.session_2 .product-item .content .price{
+   font-size: 20px;
+   font-weight: bold;
+   color: var(--color-hover);
+}
+.session_2 .product-item .content .price .underline, .session_2 .product-item .content .price-old .underline{
+   text-decoration: underline;
+}
+.session_2 .product-item .content .price-old{
+   opacity: 0.6;
+
+   margin-left: 5px;
+   position: relative;
+}
+.session_2 .product-item .content .price-old::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   background: #040404;
+   top: 9px;
+}
+.session_2 .product-item .content button{
+   background: #fff;
+   color: var(--color-hover);
+   border: 1px solid var(--color-hover);
+   width: 35px;
+   font-size: 18px;
+   height: 35px;
+   padding: 5px;
+   border-radius: 50%;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+.session_2 .product-item .content .cart:hover{
+   transform: scale(1.2);
+   transition: 1s;
+}
+.session_2 .t-center{
+   width: 100%;
+   margin-top: 15px;
+}
+.session_2 .t-center .btn-all{
+   margin: auto;
+}
+.session_2 .t-center .btn-all:hover{
+   color: #FFF;
+   background: #D82E4D;
+}
+/* End Session 2 -----------------------------------------------------------------------------------*/
+/*  Session 3 -----------------------------------------------------------------------------------*/
+.session_3 .title{
+   font-size: 25px;
+   font-weight: bold;
+}
+.session_3 .title a:hover{
+   color: var(--color-hover);
+}
+/* End Session 3 -----------------------------------------------------------------------------------*/
+/*  Session 4 -----------------------------------------------------------------------------------*/
+.session_4 .title{
+   font-size: 25px;
+   font-weight: bold;
+}
+.session_4 .title a:hover{
+   color: var(--color-hover);
+}
+.session_4 .image {
+   padding: 5px 5px 5px 0;
+   margin: 5px;
+   max-height: 400px;
+   width: 37.5%;
+   background: #FFF;
+}
+.session_4 .image img{
+   width: 100%;
+   height: auto;
+}
+.session_4 .banner{
+   text-align: center;
+   margin-top: 30px;
+}
+.session_4 .banner a img{
+   padding: 10px;
+}
+/* End Session 4 -----------------------------------------------------------------------------------*/
+/*  Session 5 -----------------------------------------------------------------------------------*/
+.session_5 .title{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.session_5 .title a:hover{
+   color: var(--color-hover);
+}
+.session_5 .right-title{
+   display: flex;
+   font-size: 14px;
+   opacity: 0.6;
+}
+.session_5 .right-title a{
+   padding: 0 10px;
+}
+.session_5 .right-title a:hover{
+   color: var(--color-hover);
+}
+.session_5 .image{
+   width: 20%;
+}
+.session_5 .image img{
+   width: 100%;
+   height: auto;
+}
+.session_5 .right{
+   display: flex;
+   flex-wrap: wrap;
+   width: calc(80% - 40px);
+   margin-left: 40px;
+}
+.session_5 .right .form-cart-add{
+   width: calc(100%/4 - 30px);
+}
+/* End Session 5 -----------------------------------------------------------------------------------*/
+/*  Session 6 -----------------------------------------------------------------------------------*/
+.session_6 .title{
+   font-size: 25px;
+   font-weight: bold;
+}
+.session_6 .title a:hover{
+   color: var(--color-hover);
+}
+.session_6 .content{
+   display: flex;
+   justify-content: space-between;
+}
+.session_6 .content .image{
+   padding: 10px;
+   text-align: center;
+   display: inline-block;
+   transition: transform 0.3s ease-in-out; /* Hiệu ứng thu nhỏ */
+   transform-origin: center;
+}
+.session_6 .content .image:hover img{
+   animation: zoom-and-shake 5s ease-in-out infinite; /* Hiệu ứng phóng to, lắc, lặp lại sau 5s */
+}
+.session_6 .content .image:hover .nameImg{
+   color: var(--color-hover);
+}
+@keyframes zoom-and-shake {
+   0% {
+     transform: scale(1);
+   }
+   5% {
+     transform: scale(0.9);
+   }
+   10%, 25%, 40% {
+     transform: rotate(-15deg) scale(0.9);
+   }
+   15%, 30%, 45% {
+     transform: rotate(15deg) scale(0.9);
+   }
+   50% {
+     transform: rotate(0deg) scale(0.9);
+   }
+   55% {
+     transform: scale(1.2); /* Phóng to nhanh hơn */
+   }
+   60% {
+     transform: scale(0.9); /* Thu nhỏ lại ngay sau khi phóng to */
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+.session_6 .content .image .nameImg{
+   padding-top: 10px;
+   font-weight: bold;
+   font-size: 14px;
+}
+.session_6 .shop-system{
+   width: 100%;
+   text-align: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.session_6 .shop-system img{
+   width: 100%;
+   height: auto;
+}
+.session_6 .social{
+   display: flex;
+   justify-content: space-between;
+}
+.session_6 .social img{
+   width: 25%;
+   height: auto;
+}
+.info-fixed {
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   right: 10px;
+   bottom: 40px;
+}
+.info-fixed .first-img{
+   padding-top: 100px;
+}
+.info-fixed .hidden {
+   opacity: 0;
+   transform: translateY(-500px); /* Di chuyển lên trên khi ẩn */
+   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.info-fixed .visible {
+   opacity: 1;
+   transition: 1s;
+   border-radius: 20px 20px 0 0;
+   transform: translateY(0); /* Trở về vị trí ban đầu khi hiển thị */
+}
+.info-fixed img{
+   width: 45px;
+   height: 45px;
+   margin-bottom: 10px;
+   border-radius: 50%;
+}
+/* End Session 6 -----------------------------------------------------------------------------------*/
+/* Bao Hanh --------------------------------------------------------------------------------*/
+.Vitri{
+   display: flex;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 96px;
+   background: #F6F6F6;
+   height: 20px;
+   width: 100%;
+   font-size: 17px;
+   position: absolute;
+}
+.Vitri a{
+   width: 90px;
+   padding: 0 5px;
+}
+.Vitri p{
+   opacity: 0.6;
+   padding-left: 5px;
+   overflow-y: hidden;
+}
+.BaoHanh .left{
+   display: none;
+   position: absolute;
+   width: 219px;
+   z-index: 99;
+   background: #FFF;
+}
+
+.BaoHanh .content{
+   padding: 60px;
+   width: 100%;
+}
+.BaoHanh .content .title{
+   font-size: 26px;
+}
+.BaoHanh .content .image-BH{
+   text-align: center;
+}
+
+/* End Bao Hanh --------------------------------------------------------------------------------*/
+/* Cua Hang --------------------------------------------------------------------------------*/
+.CuaHang .content .body .store-item{
+   margin: 20px;
+   width: 30%;
+}
+.CuaHang .content .body .store-item .image{
+   width: 100%;
+   padding-bottom: 10px;
+}
+.CuaHang .content .body {
+   padding: 40px 40px 10px 40px;
+}
+.CuaHang .content .body .store-item .image img{
+   width: 100%;
+   height: 100%;
+}
+.CuaHang .content .body .store-item .map{
+   margin-bottom: 5px;
+}
+.CuaHang .content .body .store-item .map a, .CuaHang .content .body .store-item .phone a{
+   margin-right: 10px;
+   opacity: 0.6;
+   font-size: 13px;
+}
+/* End Cua Hang --------------------------------------------------------------------------------*/
+/* Su Dung --------------------------------------------------------------------------------*/
+.SuDung .content .img-SD{
+   text-align: left;
+}
+/* End Su Dung --------------------------------------------------------------------------------*/
+/* Thanh Vien --------------------------------------------------------------------------------*/
+.bold{
+   font-weight: bold;
+}
+.text-center{
+   text-align: center;
+}
+.text-right{
+   text-align: right;
+}
+.ThanhVien .content .form{
+   font-size: 14px;
+   padding-top: 20px;
+   line-height: 40px;
+}
+.ThanhVien .content .form .title{
+   font-size: 16px;
+}
+.ThanhVien .content .form ul{
+   padding-left: 30px;
+}
+/* End Thanh Vien --------------------------------------------------------------------------------*/
+/* San pham --------------------------------------------------------------------------------*/
+.SanPham .body{
+   padding: 40px;
+   display: flex;
+}
+.SanPham .body .left-body{
+   max-height: 1000px;
+   overflow-y: auto;
+   width: calc(45% - 20px);
+   padding: 30px;
+   padding-left: 60px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.SanPham .body .left-body::-webkit-scrollbar {
+   width: 12px;
+}
+.SanPham .body .left-body::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+.SanPham .body .left-body::-webkit-scrollbar-thumb {
+   background: var(--color-2);
+   border-radius: 10px;
+}
+
+.SanPham .body .left-body::-webkit-scrollbar-thumb:hover {
+   filter: brightness(1.2);
+}
+.SanPham .body .left-body img{
+   width: calc(50% - 30px);
+   height: auto;
+   border: 1px solid #000;
+   margin-bottom: 30px;
+}
+.SanPham .body .right{
+   padding: 30px;
+   width: 30%;
+}
+.SanPham .body .right .shopName{
+   font-size: 22px;
+   opacity: 0.5;
+   font-weight: bold;
+   color: var(--color-3);
+}
+.SanPham .body .right .ten-Sp{
+   font-size: 27px;
+   padding: 10px 0;
+}
+.SanPham .body .right .info-Sp{
+   display: flex;
+   padding-bottom: 30px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #ddd;
+}
+.SanPham .body .right .info-Sp .tinhtrang{
+   padding-right: 20px;
+   position: relative;
+}
+.SanPham .body .right .info-Sp .ma-Sp{
+   margin-left: 20px;
+}
+.SanPham .body .right .info-Sp .tinhtrang::before{
+   position: absolute;
+   content: "";
+   width: 1px;
+   height: 90%;
+   right: 1px;
+   background: #aaa9a9;
+}
+.SanPham .body .right .price{
+   display: flex;
+   align-items: center;
+}
+.SanPham .body .right .priceNew{
+   font-size: 38px;
+   color: var(--color-2);
+}
+.SanPham .body .right .priceOld{
+   font-size: 19px;
+   opacity: 0.6;
+   text-decoration: line-through;
+}
+.SanPham .body .right .price .phantram{
+   padding: 5px 10px;
+   background: var(--color);
+   color: var(--color-2);
+   border-radius: 17px;
+   margin-left: 20px;
+}
+.SanPham .body .right .tietkiem{
+   margin-bottom: 20px;
+}
+.SanPham .body .right .sale{
+   padding: 15px 30px;
+   background: #FFFEE8;
+   font-size: 28px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+.SanPham .body  .title-item{
+   font-size: 22px;
+   color: var(--color-3);
+}
+.SanPham .body .right .size ul{
+   display: flex;
+}
+.SanPham .body .right .size ul label{
+   padding: 5px 15px;
+   border: 1px solid var(--color-3);
+   margin: 20px 15px;
+   cursor: pointer;
+   position: relative;
+}
+.SanPham .body .right .size ul label input[type="radio"]{
+   display: none;
+   position: absolute;
+}
+.SanPham .body .right .size ul label:hover{
+   border: 1px solid var(--color-2);
+   color: var(--color-2);
+}
+.SanPham .body .right .size ul label.active {
+   border: 1px solid var(--color-2);
+   color: var(--color-2);
+}
+.SanPham .body .right .chonSize{
+   cursor: pointer;
+   margin-bottom: 15px;
+}
+.SanPham .body .right .soluong{
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+}
+.SanPham .body .right .soluong span{
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+}
+.SanPham .body .right .soluong span input{
+   border: 0;
+   outline: 0;
+   width: 50px;
+   font-size: 22px;
+   text-align: center;
+}
+.SanPham .body .right .soluong span p{
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   border: 1px solid #ddd;
+   color: var(--color-3);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 16px;
+}
+.SanPham .body .right .soluong span p:hover{
+   color: var(--color-2);
+   border: 1px solid var(--color-2);
+   transition: 0.5s;
+}
+.SanPham .body .right .btn{
+   display: flex;
+   align-items: center;
+   margin-bottom: 40px;
+}
+.SanPham .body .right .btn .pay{
+   padding: 10px 30px;
+   width: 200px;
+   font-size: 22px;
+   color: var(--color-hover);
+   border: 1px solid var(--color-hover);
+   margin-right: 20px;
+   background: #FFF;
+   border-radius: 30px;
+   cursor: pointer;
+   text-align: center;
+}
+.SanPham .body .right .btn .pay:hover{
+   color: #FFF;
+   background: var(--bg);
+   transition: 0.7s;
+}
+.SanPham .body .right .btn .addCart{
+   padding: 10px 30px;
+   width: 200px;
+   font-size: 22px;
+   color: #FFF;
+   border: 1px solid var(--bg);
+   background: var(--bg);
+   border-radius: 30px;
+   text-align: center;
+   cursor: pointer;
+}
+.SanPham .body .right .btn .addCart:hover{
+   filter: brightness(1.2);
+   transition: 0.7s;
+}
+.SanPham .body .right .pay p{
+   font-size: 23px;
+   padding-bottom: 20px;
+}
+.SanPham .body .right .pay .item{
+   display: flex;
+   padding: 10px 0 10px 10px;
+}
+.SanPham .body .right .pay .item input[type="radio"]{
+   display: none;
+}
+.SanPham .body .right .pay .item label{
+   display: flex;
+   align-items: center;
+   padding: 20px;
+   border: 1px solid #ccc;
+   margin-right: 12px;
+   cursor: pointer;
+   position: relative;
+   transition: all .3s ease-in-out;
+   width: 100%;
+   font-size: 22px;
+   padding-left: 30px;
+}
+.SanPham .body .right .pay .item input[type="radio"]:checked + label::before{
+   background: var(--bg);
+   top: 0;
+}
+.SanPham .body .right .pay .item input[type="radio"]:checked + label{
+   border: 1px solid var(--bg);
+   animation: radio-translate .5s ease-in-out;
+}
+@keyframes radio-translate {
+   0%{
+      transform: translateX(0);
+   }
+   50%{
+      transform: translateY(-10);
+   }
+   100%{
+      transform: translateX(0);
+   }
+}
+.SanPham .body .right .quyenloi{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+.SanPham .body .right .quyenloi .item{
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+   padding-right: 20px;
+   width: 250px;
+   margin-right: 20px;
+}
+.SanPham .body .right .quyenloi .item img{
+   width: 60px;
+   height: auto;
+}
+.SanPham .body .right .quyenloi .item p{
+   font-size: 20px;
+   padding-left: 15px;
+}
+.SanPham .body .right-code{
+   margin-top: 30px;
+   margin-left: 30px;
+   position: relative;
+}
+.SanPham .body .right-code .item{
+   background: #fff;
+   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .35));
+   padding: 10px;
+   border-radius: 5px;
+   margin-top: 30px;
+   position: relative;
+}
+.SanPham .body .right-code .item::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -3px;
+   height: 100%;
+   width: 10px;
+   color: #fff;
+   background-clip: padding-box;
+   background: repeating-linear-gradient(#e5e5e5, #e5e5e5 5px, transparent 0, transparent 9px, #e5e5e5 0, #e5e5e5 10px) 0 / 2px 100% no-repeat, /* Tăng độ rộng từ 1px lên 2px */
+   radial-gradient(circle at 0 7px, transparent, transparent 2px, #e5e5e5ee 0, #e5e5e5 3px, currentColor 0) 1px 0 / 100% 10px repeat-y;
+}
+.SanPham .body .right-code .item .title-code{
+   color: var(--color-hover);
+   font-weight: 800;
+}
+.SanPham .body .right-code .item .desc{
+   font-size: 13px;
+    line-height: 1.2;
+    color: #727272;
+    padding-bottom: 7px;
+}
+.SanPham .body .right-code .item .thaotac{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.SanPham .body .right-code .item .thaotac button{
+   border: none;
+   padding: 6px 15px;
+   margin-bottom: 3px;
+   border-radius: 15px;
+   color: #FFF;
+   background-color: var(--color-hover);
+   cursor: pointer;
+}
+.SanPham .body .right-code .item .thaotac button:hover{
+   color: #fff;
+   filter: brightness(1.1);
+}
+.SanPham .body .right-code .item .thaotac a{
+   text-decoration: underline;
+   color: blue;
+}
+.SanPham .bottom{
+   width: 65%;
+   position: relative;
+}
+.SanPham .bottom .content-thanhvien .Vitri, .SanPham .bottom .content-thanhvien .content .title a{
+   display: none;
+}
+.SanPham .bottom .content-thanhvien{
+   font-size: 22px;
+   padding-left: 0 !important;
+}
+.SanPham .bottom .content-thanhvien p .ThanhVien .content .form .text-right{
+   text-align: right;
+}
+.SanPham .bottom .content-baohanh{
+   max-height: 450px;
+   text-align: center;
+   max-height: none;
+}
+.SanPham .bottom .title-top{
+   display: flex;
+   margin-left: 40px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #000;
+}
+.SanPham .bottom .content-title{
+   cursor: pointer;
+   font-size: 14px;
+   padding: 10px 18px;
+   margin-left: 15px;
+   outline: 0 !important;
+   color: #666666;
+   border: 1px solid #f0f0f0;
+   border-radius: 5px;
+   font-weight: 700;
+   text-transform: uppercase;
+   background: transparent;
+   border-bottom: 1px solid #000;
+   border-right: 1px solid #000;
+}
+.SanPham .bottom .active-content{
+   display: none;
+}
+.SanPham .bottom .content{
+   padding: 20px 0 30px 100px;
+   overflow-y: hidden;
+   margin-bottom: 30px;
+   z-index: 1;
+}
+.SanPham .bottom .content-mota{
+   font-size: 17px;
+   width: 90%;
+}
+.SanPham .bottom .content-title.active {
+   border-color: orange; /* Màu border khi tab được chọn */
+   color: orange;
+}
+.SanPham .menu{
+   position: relative;
+}
+.SanPham .menu .left{
+   display: none;
+   position: absolute;
+   width: 219px;
+   z-index: 99;
+   background: #FFF;
+}
+/* End San pham --------------------------------------------------------------------------------*/
+/*  Gio hang --------------------------------------------------------------------------------*/
+.GioHang .content .left-main{
+   width: 65%;
+}
+.GioHang .content .title{
+   margin-bottom: 30px;
+}
+.GioHang .content .image-emp-cart{
+   width: 100%;
+   text-align: center;
+}
+.GioHang .content .image-emp-cart img{
+   width: 30%;
+   height: auto;
+}
+.GioHang .content .left-main .item{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #ccc;
+   padding: 20px;
+   padding-left: 40px;
+}
+.GioHang .content .left-main .item .item-left{
+   display: flex;
+   align-items: center;
+   max-width: 70%;
+}
+.GioHang .content .left-main .item .item-left .close{
+   margin-right: 20px;
+   font-size: 25px;
+   color: var(--color-3);
+}
+.GioHang .content .left-main .item .item-left .image{
+   width: 100px;
+}
+.GioHang .content .left-main .item .item-left .image img{
+   width: 100%;
+   height: auto;
+}
+.GioHang .content .left-main .item .item-left .infoSp{
+   margin-left: 20px;
+}
+.GioHang .content .left-main .item .item-left .infoSp .tenSp, .GioHang .content .left-main .item .item-left .infoSp .size{
+   padding-bottom: 10px;
+}
+.GioHang .content .left-main .item .item-right{
+   display: flex;
+   align-items: center;
+}
+.GioHang .content .left-main .item .item-right .gia{
+   font-size: 18px;
+   margin-right: 15px;
+   color: var(--color-2);
+   font-weight: 550;
+}
+.GioHang .content .left-main .item .item-right .soluong {
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+}
+
+.GioHang .content .left-main .item .item-right .soluong input[type=number]{
+   border: 0;
+   outline: 0;
+   width: 40px;
+   font-size: 17px;
+   text-align: center;
+}
+.GioHang .content .left-main .item .item-right .soluong input[type=submit]{
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #ddd;
+   background: #FFF;
+   color: var(--color-3);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 13px;
+}
+.GioHang .content .left-main .item .item-right .soluong  input[type=submit]:hover{
+   color: var(--color-2);
+   border: 1px solid var(--color-2);
+   transition: 0.5s;
+}
+.GioHang .content .left-main .item .item-right .btn input{
+   margin-left: 20px;
+   background: var(--color-2);
+   padding: 7px 34px;
+   border-radius: 20px;
+   border: 0;
+   cursor: pointer;
+   color: #FFF;
+}
+.GioHang .content .left-main .item .item-right .btn:hover{
+   fill: #D0021B;
+}
+.GioHang .content .bottom-main{
+   margin-top: 40px;
+   width: 64%;
+}
+.GioHang .content .bottom-main .title{
+   margin-bottom: 20px;
+   font-size: 17px;
+}
+.GioHang .content .bottom-main input{
+   width: 100%;
+   padding: 15px 25px;
+   outline: none;
+   border: 1px solid #000;
+   box-sizing: border-box;
+}
+.GioHang .content .right-main{
+   width: calc(30% - 20px);
+   margin-left: 20px;
+   background: #F7F7F7;
+   max-height: 300px;
+   padding: 20px;
+
+}
+.GioHang .content .right-main .sum{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.GioHang .content .right-main .sum p:first-child{
+   font-weight: bold;
+}
+.GioHang .content .right-main .sum p:last-child{
+   color: var(--color-2);
+   font-size: 18px;
+   font-weight: 500;
+}
+.GioHang .content .right-main .ma-giam-gia{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+.GioHang .content .right-main .ma-giam-gia .left-magiamgia{
+   display: flex;
+}
+.GioHang .content .right-main .ma-giam-gia .left-magiamgia p{
+   margin-left: 8px;
+}
+.GioHang .content .right-main .ma-giam-gia .right-magiamgia a{
+   display: flex;
+   align-items: center;
+   color: blue;
+}
+.GioHang .content .right-main .ma-giam-gia .right-magiamgia i{
+   margin-left: 8px;
+   font-size: 12px;
+}
+/* .GioHang .content .right-main .thanhtoan{
+   width: 95%;
+   height: 40px;
+   color: #FFF;
+   background-color: var(--color-2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   border-radius: 7px;
+   cursor: pointer;
+} */
+.GioHang .content .right-main .thanhtoan a{
+   font-size: 20px;
+   width: 95%;
+   height: 40px;
+   color: #FFF;
+   background-color: var(--color-2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   border-radius: 7px;
+   cursor: pointer;
+}
+.GioHang .content .right-main .phuongthuc{
+   margin-top: 20px;
+   font-size: 15px;
+   font-weight: 500;
+   padding-left: 20px;
+}
+.GioHang .content .right-main .phuongthuc p{
+   padding-bottom: 20px;
+}
+/* End Gio hang --------------------------------------------------------------------------------*/
+/* Thanh toan --------------------------------------------------------------------------------*/
+.ThanhToan{
+   display: flex;
+   padding: 50px 150px;
+}
+.ThanhToan .left{
+   width: 50%;
+}
+.ThanhToan .left .title{
+   font-size: 20px;
+   font-weight: 400;
+}
+.ThanhToan .left .noteLogin{
+   font-size: 17px;
+   color: var(--color-3);
+   padding-top: 15px;
+}
+.ThanhToan .left .noteLogin a{
+   color: #176FEE;
+}
+.ThanhToan .left .form-thanhtoan{
+   padding-top: 30px;
+}
+.ThanhToan .left .form-thanhtoan input{
+   padding: 5px 10px;
+   outline: none;
+   height: 25px;
+   border: 1px solid #ddd;
+   margin-bottom: 20px;
+}
+.ThanhToan .left .form-thanhtoan input.hoTen, .ThanhToan .left .form-thanhtoan .DiaChiCuThe{
+   width: 100%;
+}
+.ThanhToan .left .form-thanhtoan input.email{
+   width: 70%;
+}
+.ThanhToan .left .form-thanhtoan input.phone{
+   width: calc(30% - 65px);
+   margin-left: 20px;
+}
+.ThanhToan .left .form-thanhtoan .inputDiaChi{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+.ThanhToan .left .form-thanhtoan .inputDiaChi .diaChi{
+   width: calc(100%/3 - 10px);
+   padding: 0 10px;
+   outline: none;
+   height: 40px;
+   border: 1px solid #ddd;
+   margin-bottom: 20px;
+}
+.ThanhToan .left .form-thanhtoan label{
+   width: 100%;
+   border: 1px solid #ddd;
+   padding: 10px 20px;
+   display: flex;
+   cursor: pointer;
+   align-items: center;
+   border-top: 1px solid #ddd;
+   border-left: 1px solid #ddd;
+   border-right: 1px solid #ddd;
+   border-bottom: 0;
+}
+.ThanhToan .left .form-thanhtoan label:last-of-type{
+   border-bottom: 1px solid #ddd;
+}
+.ThanhToan .left .form-thanhtoan .title-pttt{
+   margin-bottom: 20px;
+   font-size: 20px;
+   font-weight: 400;
+}
+.ThanhToan .left .form-thanhtoan label input[type="radio"]{
+   position: relative;
+   margin-bottom: 0;
+   margin-right: 15px;
+}
+.ThanhToan .left .form-thanhtoan label input[type="radio"]:checked + label::before{
+   background: #338dbc;
+   border: none;
+   border-radius: 50%;
+}
+.ThanhToan .left .form-thanhtoan label img{
+   width: 40px;
+   height: 40px;
+   margin-right: 15px;
+}
+.ThanhToan .left .form-thanhtoan label p{
+   color: var(--color-3);
+   font-size: 14px;
+}
+.ThanhToan .left .form-thanhtoan label .right-tt-vnpay{
+   margin-top: 5px;
+}
+.ThanhToan .left .form-thanhtoan label .right-tt-vnpay img{
+   max-height: 35px;
+   width: 100px;
+}
+.ThanhToan .left .form-thanhtoan .left-bottom-tt{
+   width: 100%;
+   margin-top: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.ThanhToan .left .form-thanhtoan .left-bottom-tt a{
+   color: #176FEE;
+   font-size: 13px;
+}
+.ThanhToan .left .form-thanhtoan .left-bottom-tt .btn-submit{
+   margin-bottom: 0;
+   padding: 10px 20px;
+   background: #176FEE;
+   border-radius: 8px;
+   color: #FFF;
+   height: 40px;
+   width: 160px;
+   cursor: pointer;
+}
+.ThanhToan .left .form-thanhtoan .left-bottom-tt .btn-submit:hover{
+   filter: brightness(1.2);
+}
+.ThanhToan .right{
+   width: 45%;
+   height: 629px;
+   background: #F9F9F9;
+   border-left: 1px solid #ccc;
+   margin-left: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.ThanhToan .right .Sanpham {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-height: 500px;
+   border-bottom: 1px solid #ddd;
+}
+.ThanhToan .right .image{
+   width: 100px;
+   height: 100px;
+   padding-left: 30px;
+   overflow-y: hidden;
+}
+.ThanhToan .right .image img{
+   width: 75%;
+   height: auto;
+   object-fit: cover;
+}
+.ThanhToan .right .Sanpham .left-Sanpham{
+   display: flex;
+   align-items: center;
+   position: relative;
+   padding: 10px 30px 0 0;
+   max-height: 500px;
+   overflow: auto;
+}
+.ThanhToan .right .left-Sanpham .infoSp{
+   margin-left: 20px;
+   width: 60%;
+}
+.ThanhToan .right .left-Sanpham .soLuong{
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background: #b1afaf;
+   color: #FFF;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   top: 0;
+   left: 96px;
+}
+.ThanhToan .right .right-Sanpham{
+   width: 30%;
+   text-align: right;
+}
+.ThanhToan .right .right-Sanpham li{
+   list-style: none;
+}
+.ThanhToan .right::-webkit-scrollbar {
+   width: 8px;
+}
+.ThanhToan .right::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+.ThanhToan .right::-webkit-scrollbar-thumb {
+   background: var(--color-2);
+   border-radius: 10px;
+}
+
+.ThanhToan .right .right-Sanpham .left-Sanpham::-webkit-scrollbar-thumb:hover {
+   filter: brightness(1.2);
+}
+.ThanhToan .right .maGiamGia{
+   margin-top: 15px;
+   margin-bottom: 15px;
+   border-bottom: 1px solid #ccc;
+   padding-bottom: 15px;
+   width: 100%;
+}
+.ThanhToan .right .maGiamGia .nhapMa{
+   display: flex; 
+}
+.ThanhToan .right .maGiamGia .nhapMa input{
+   width: 70%;
+   outline: none;
+   border: 1px solid #ddd;
+   padding: 5px 10px;
+   height: 35px;
+   border-radius: 7px;
+}
+.ThanhToan .right .maGiamGia .nhapMa input:focus{
+   border: 1px solid #176FEE;
+}
+.ThanhToan .right .maGiamGia .nhapMa .btn-submit{
+   width: calc(25% - 20px);
+   margin-left: 20px;
+   padding: 5px 10px;
+   background: #176FEE;
+   color: #fff;
+   border: 0;
+   height: 35px;
+   cursor: pointer;
+   border-radius: 7px;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.ThanhToan .right .maGiamGia .nhapMa .btn-submit:hover{
+   filter: brightness(1.3);
+}
+.ThanhToan .right .maGiamGia .xemThemMa .ma{
+   padding-top: 20px;
+   padding-bottom: 20px;
+   margin-bottom: 5px;
+   display: flex;
+   justify-content: flex-start;
+   justify-content: space-between;
+   width: 100%;
+}
+.ThanhToan .right .maGiamGia .xemThemMa p{
+   margin-top: 15px;
+   color: #338dbc;
+   cursor: pointer;
+}
+.ThanhToan .right .maGiamGia .xemThemMa span{
+   overflow: hidden;
+   padding: 6px 0;
+   position: relative;
+}
+.ThanhToan .right .maGiamGia .xemThemMa span span{
+   border: 1px solid #338dbc;
+   border-radius: 3px;
+   background: #fff;
+   font-weight: 500;
+   color: #338dbc;
+   position: relative;
+   z-index: 1;
+   padding: 5px 10px;
+   font-size: 15px;
+   overflow: hidden;
+}
+.ThanhToan .right .maGiamGia .xemThemMa .ma span span::before{
+   content: '';
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   border: 1px solid #338dbc;
+   z-index: 2;
+   background: #FFF;
+   left: -6px;
+   border-radius: 50%;
+   transform: translateY(-50%);
+   overflow: hidden;
+   top: 50%;
+}
+.ThanhToan .right .maGiamGia .xemThemMa .ma span span::after{
+   content: "";
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   border: 1px solid #338dbc;
+   z-index: 2;
+   background: #fff;
+   top: 50%;
+   border-radius: 50%;
+   transform: translateY(-50%);
+   overflow: hidden;
+   right: -6px;
+}
+.ThanhToan .right .tongTien .item-right{
+   display: flex;
+   justify-content: space-between;
+}
+.ThanhToan .right .tongTien ul li{
+   padding: 10px 20px;
+}
+/* End Thanh toan --------------------------------------------------------------------------------*/
+/* Login --------------------------------------------------------------------------------*/
+.Login {
+   padding: 50px 0;  
+   width: 100%;
+}
+.Login .formLogin {
+   width: 33%;
+   height: auto;
+   margin: auto;
+}
+.Login .formLogin .title{
+   font-size: 24px;
+   text-align: center;
+}
+.Login .formLogin .noteDK{
+   font-size: 13px;
+   text-align: center;
+   margin-top: 3px;
+}
+.Login .formLogin .noteDK a{
+   text-decoration: underline;
+   color: #176FEE;
+}
+.Login .formLogin label{
+   font-weight: 700;
+   font-size: 14px;
+}
+.Login .formLogin input{
+   height: 40px;
+   padding: 0 20px;
+   margin-bottom: 8px;
+   border-radius: 3px;
+   border: 1px solid #e1e1e1;
+   outline: none;
+   width: 100%;
+   margin-top: 7px;
+   border-right: 1px solid #e1e1e1;
+   box-sizing: border-box;
+}
+.Login .formLogin .noteQuen{
+   font-size: 13px;
+   margin-top: 9px;
+}
+.Login .formLogin .noteQuen a{
+   text-decoration: underline;
+   color: #176FEE;
+}
+.Login .formLogin input[type="submit"]{
+   background: var(--color);
+   color: red;
+   font-size: 17px;
+   border-radius: 47px;
+   border: 0;
+   cursor: pointer;
+}
+.Login .formLogin input[type="submit"]:hover{
+   color: #FFF;
+}
+.Login .formLogin .phuongAnKhac-title{
+   color: #6c757d;
+   font-size: 14px;
+   text-align: center;
+   margin-top: 20px;
+}
+.Login .formLogin .phuongAnKhac{
+   display: flex;
+   margin-top: 20px;
+   justify-content: center;
+}
+.Login .formLogin .phuongAnKhac .image-login{
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   margin: 0 15px;
+   color: #FFF;
+   padding: 5px 10px;
+   border-radius: 15px;
+   cursor: pointer;
+}
+.Login .formLogin .phuongAnKhac .image-login:first-of-type{
+   background: orange;
+}
+.Login .formLogin .phuongAnKhac .image-login:last-of-type{
+   background: #176FEE;
+
+}
+.Login .formLogin .phuongAnKhac .image-login:hover{
+   filter: brightness(1.3);
+}
+.Login .formLogin .phuongAnKhac .image-login p{
+   margin-left: 7px;
+}
+.Login .formLogin .phuongAnKhac .image-login img{
+   width: 30px;
+   height: auto;
+}
+.Login .formLogin .info{
+   text-align: center;
+   font-size: 19px;
+   text-align: center;
+   margin: 20px 0;
+}
+/* End Login --------------------------------------------------------------------------------*/
+/* Tai Khoan --------------------------------------------------------------------------------*/
+.TaiKhoan{
+   display: flex;
+   position: relative;
+}
+.TaiKhoan .left_TK{
+   width: 20%;
+   position: relative;
+   margin-top: 70px;
+   padding: 0 0 50px 150px;
+}
+.TaiKhoan .left_TK::before{
+   content: "";
+   position: absolute;
+   width: 1px;
+   height: 150px;
+   background: #ddd;
+   top: 0;
+   right: 60px;
+}
+.TaiKhoan .left_TK .title{
+   margin-bottom: 0;
+   font-size: 18px;
+   padding-top: 10px;
+}
+.TaiKhoan .left_TK .hoTen{
+   font-size: 14px;
+   font-weight: bold;
+}
+.TaiKhoan .left_TK .hoTen span{
+   color: var(--color-2);
+}
+.TaiKhoan .left_TK ul{
+   margin-top: 30px;
+   line-height: 30px;
+}
+.TaiKhoan .left_TK ul li{
+   font-size: 14px;
+   cursor: pointer;
+}
+.TaiKhoan .right_TK{
+   margin-top: 70px;
+   width: 75%;
+   
+}
+.TaiKhoan .right_TK .title{
+   margin-bottom: 20px;
+   padding-top: 10px;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .hoTen span{
+   font-weight: bold;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DiaChi, .TaiKhoan .right_TK .ThongTinTaiKhoan .phone{
+   display: flex;
+   margin-top: 15px;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DiaChi i, .TaiKhoan .right_TK .ThongTinTaiKhoan .phone i{
+   font-size: 17px;
+   color: var(--color-2);
+   margin-right: 10px;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DonHang .title{
+   margin-top: 20px
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DonHang table{
+   border-collapse: collapse;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DonHang table thead tr td{
+   font-size: 14px;
+   font-weight: bold;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DonHang table tr td{
+   padding: 10px 20px;
+   text-align: center;
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+}
+.TaiKhoan .right_TK .ThongTinTaiKhoan .DonHang table tr td .co-DonHang{
+   color: #176FEE;
+}
+/* .TaiKhoan .right_TK .DiaChi{
+   position: relative;
+} */
+.TaiKhoan .right_TK .DiaChi .btn-submit{
+   padding: 10px 20px;
+   background: var(--color-2);
+   color: #FFF;
+   font-size: 13px;
+   border-radius: 5%;
+   border: 0;
+   cursor: pointer;
+   margin-bottom: 20px;
+}
+.TaiKhoan .right_TK .DiaChi .btn-submit:hover{
+   filter: brightness(1.3);
+}
+
+.model_ThemDiaChi{
+   width: 600px;
+   height: auto;
+   position: fixed;
+   top: 24.5%;
+   left: calc(48.5% - 300px);
+   background: #fff;
+   z-index: 10;
+   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .35));
+   padding: 30px;
+   display: none;
+}
+.model_ThemDiaChi .title{
+   padding-bottom: 20px;
+   border-bottom: 1px solid #ddd;
+   margin-bottom: 20px;
+}
+.model_ThemDiaChi .close{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 22px;
+   cursor: pointer;
+}
+.model_ThemDiaChi form{
+   display: flex;
+   flex-wrap: wrap;
+}
+.model_ThemDiaChi form input{
+   width: 100%;
+   padding: 10px;
+   height: 20px;
+   outline: 0;
+   border: 0;
+   border: 1px solid #ccc;
+   margin-bottom: 20px;
+   border-radius: 5px;
+}
+.model_ThemDiaChi form .checkbox{
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+.model_ThemDiaChi form .checkbox input[type="checkbox"]{
+   text-align: left;
+   width: 2%;
+   margin-right: 5px;
+   margin-bottom: 0;
+}
+.model_ThemDiaChi form .Gui{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 100%;
+}
+.model_ThemDiaChi form .Gui input{
+   width: 100px;
+   padding: 10px 20px;
+   margin-left: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 0;
+   height: 40px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.model_ThemDiaChi form .Gui input[type="reset"]{
+   background: #FFF;
+   border: 1px solid var(--color-2);
+   color: var(--color-2);
+}
+.model_ThemDiaChi form .Gui input[type="submit"]{
+   background: var(--color-2);
+   color: #fff;
+}
+.model_ThemDiaChi form p{
+   font-size: 14px;
+   color: var(--color-3);
+}
+.TaiKhoan .right_TK .DiaChi .DiaChi_TK{
+   border-bottom: 1px solid #ccc;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 100px;
+   position: relative;
+}
+.TaiKhoan .right_TK .DiaChi .DiaChi_TK .right_DCTK{
+   display: flex;
+   justify-content: space-between;
+   width: 20%;
+}
+.TaiKhoan .right_TK .DiaChi .DiaChi_TK .right_DCTK button{
+   background: transparent;
+   border: 0;
+   cursor: pointer;
+}
+.TaiKhoan .right_TK .DiaChi .DiaChi_TK .right_DCTK .CapNhat{
+   font-size: 14px;
+   color: #176FEE;
+   cursor: pointer;
+   padding: 5px 10px;
+}
+.TaiKhoan .right_TK .DiaChi .DiaChi_TK .right_DCTK .Xoa{
+   font-size: 14px;
+   color: red;
+   padding: 5px 10px;
+}
+.TaiKhoan .right_TK .DiaChi ul{
+   padding: 10px 0;
+}
+.TaiKhoan .right_TK .DiaChi ul li{
+   line-height: 30px;
+   color: #6c757d;
+}
+.TaiKhoan .right_TK .DiaChi ul li span{
+   color: #000;
+}
+.TaiKhoan .right_TK .MacDinh{
+   position: absolute;
+   top: 7px;
+   font-size: 12px;
+   left: 20%;
+   display: flex;
+   align-items: center;
+   color: #63C58C;
+   padding-top: 10px;
+}
+.TaiKhoan .right_TK .MacDinh i{
+   margin-right: 5px;
+   z-index: 3;
+}
+.DiaChiCapNhat{
+   display: block !important;
+}
+/* End Tai Khoan --------------------------------------------------------------------------------*/
+/* Tat ca san pham --------------------------------------------------------------------------------*/
+.All_SP {
+   display: flex;
+   padding: 0 0 0 50px;
+}
+.All_SP .left{
+   width: 16%;
+}
+.All_SP .left .title{
+   font-size: 25px;
+   color: var(--bg);
+
+   margin-bottom: 30px;
+}
+.All_SP .left .item{
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+}
+.All_SP .left .item:hover{
+   color: var(--color-2);
+   transition: 0.1s;
+}
+.All_SP .left .item [type="radio"] {
+	display: none;
+}
+.All_SP .left .item label{
+   display: block;
+   padding: 10px 30px;
+   background: #FFF;
+   border: 2px solid var(--color-2);
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 400;
+   width: 70%;
+   white-space: nowrap;
+   transition: 0.4s ease-in-out 0s;
+   position: relative;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+.All_SP .left .item label::after{
+   content: "";
+   position: absolute;
+   border-radius: 50%;
+   background: #524eee;
+   height: 30px;
+   width: 30px;
+   right: -10px;
+   bottom: -5px;
+   transform: scale(5);
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.4s ease-in-out 0s;
+   z-index: 5;
+}
+.All_SP .left .item label::before{
+   content: "";
+	position: absolute;
+	border-radius: 50%;
+   background: #524eee;
+   height: 30px;
+   width: 30px;
+   left: -10px;
+   top: -5px;
+   transform: scale(5);
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.4s ease-in-out 0s;
+}
+.All_SP .left .item [type="radio"]:checked ~ label{
+   border-color: #524eee;
+   color: #524eee;
+}
+.All_SP .left .item [type="radio"]:checked ~ label::before, .All_SP .left .item [type="radio"]:checked ~ label::after{
+   opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+.All_SP .right {
+   width: 85%;
+}
+.All_SP .right .title{
+   font-size: 25px;
+   color: var(--color-hover);
+}
+.All_SP .right .SapXep{
+   display: flex;
+   width: 40%;
+   margin-top: 20px;
+   padding-bottom: 7px;
+   border-bottom: 1px solid #ddd;
+}
+.All_SP .right .SapXep p, 
+.All_SP .right .SapXep a{
+   margin-right: 15px;
+}
+.All_SP .right .SapXep a:hover{
+   color: var(--color-hover);
+}
+.All_SP .right .right-body{
+   display: flex;
+   flex-wrap: wrap;
+}
+.All_SP .right .right-body .item{
+   width: calc(100% / 5 - 40px);
+   padding: 5px;
+   margin: 10px;
+   max-height: 400px;
+   border: 1px solid #ccc;
+   background: #FFF;
+}
+.All_SP .right .right-body .item .form-cart-add .image{
+   text-align: center;
+   width: 200px;
+   height: 200px;
+   margin: auto;
+   max-height: 245px;
+   overflow: hidden;
+}
+.All_SP .right .right-body .item .form-cart-add .image img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+.All_SP .right .right-body .item .form-cart-add .content .info-product {
+   padding: 10px;
+   position: relative;
+}
+.All_SP .right .right-body .item .form-cart-add .info-product {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.All_SP .right .right-body .item .form-cart-add .info-product  .shopName{
+   font-size: 13px;
+   opacity: 0.6;
+}
+.All_SP .right .right-body .item .form-cart-add .info-product  .evaluate{
+   display: flex;
+   align-items: center;
+}
+
+.All_SP .right .right-body .item .form-cart-add .info-product  .evaluate i{
+   font-size: 14px;
+   color: yellow;
+}
+
+.All_SP .right .right-body .item .form-cart-add .info-product  .evaluate span{
+   font-size: 15px;
+   opacity: 0.8;
+   padding-right: 5px;
+   position: relative;
+}
+.All_SP .right .right-body .item .form-cart-add .info-product  .evaluate > span::before{
+   content: "";
+   position: absolute;
+   width: 5px;
+   height: 12px;
+   background: #ccc;
+   left: 11px;
+   top: 3px;
+}
+.All_SP .right .right-body .item .form-cart-add .info-product .evaluate p{
+   padding-left: 5px;
+   font-size: 13px;
+   opacity: 0.6;
+}
+.All_SP .right .right-body .item .form-cart-add .content{
+   position: relative;
+}
+.All_SP .right .right-body .item .form-cart-add .content .name-product{
+   font-size: 17px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   height: 65px;
+}
+.All_SP .right .right-body .item:hover .form-cart-add .content .name-product{
+   color: var(--color-2);
+}
+.All_SP .right .right-body .item .form-cart-add .content .price{
+   font-size: 20px;
+   font-weight: bold;
+   color: var(--color-hover);
+}
+.All_SP .right .right-body .item .form-cart-add .content .price .underline, .All_SP .right .right-body .item .form-cart-add .content .price-old .underline{
+   text-decoration: underline;
+}
+.All_SP .right .right-body .item .form-cart-add .content .price-old{
+   opacity: 0.6;
+   margin-left: 5px;
+   position: relative;
+}
+.All_SP .right .right-body .item .form-cart-add .content .price-old::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   background: #040404;
+   top: 9px;
+}
+.All_SP .right .right-body .item .form-cart-add .content button{
+   background: #fff;
+   color: var(--color-hover);
+   border: 1px solid var(--color-hover);
+   width: 35px;
+   font-size: 18px;
+   height: 35px;
+   padding: 5px;
+   border-radius: 50%;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.5s ease-in-out;
+}
+.All_SP .right .right-body .item .form-cart-add .content .cart:hover{
+   transform: scale(1.2);
+   transition: 1s;
+}
+/* End Tat ca san pham --------------------------------------------------------------------------------*/
